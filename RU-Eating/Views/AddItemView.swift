@@ -55,7 +55,7 @@ struct AddItemsView : View {
         }
         .searchable(text: $viewModel.searchText)
         .searchScopes($lastDiningHall, activation: .onSearchPresentation) {
-            ForEach(diningHalls.map { $0.shortenName }, id: \.self) { name in
+            ForEach(places.map { $0.shortenName }, id: \.self) { name in
                 Text(name)
             }
         }

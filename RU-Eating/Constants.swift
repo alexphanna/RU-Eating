@@ -7,55 +7,12 @@
 
 import Foundation
 
-let diningHalls: [DiningHall] = [
-    DiningHall(name: "Busch Dining Hall", campus: Campus.busch, id : 4, hasTakeout: true, hours: [("09:30", "20:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "21:00"), ("09:30", "20:00")]),
-    DiningHall(name: "Livingston Dining Commons", campus: Campus.livingston, id : 3, hasTakeout: false),
-    DiningHall(name: "Neilson Dining Hall", campus: Campus.cookDouglass, id : 5, hasTakeout: true),
-    DiningHall(name: "The Atrium", campus: Campus.collegeAve, id : 13, hasTakeout: false, hours: [("09:30", "20:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "21:00"), ("09:30", "20:00")])
+let places: [Place] = [
+    Place(name: "Busch Dining Hall", id : 4, hasTakeout: true, hours: [("09:30", "20:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "21:00"), ("09:30", "20:00")]),
+    Place(name: "Livingston Dining Commons", id : 3, hasTakeout: false),
+    Place(name: "Neilson Dining Hall", id : 5, hasTakeout: true),
+    Place(name: "The Atrium", id : 13, hasTakeout: false, hours: [("09:30", "20:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "21:00"), ("09:30", "20:00")])
 ]
-
-let places: [any Place] = [
-    // Busch
-    DiningHall(name: "Busch Dining Hall", campus: Campus.busch, id : 4, hasTakeout: true, hours: [("09:30", "20:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "21:00"), ("09:30", "20:00")]),
-    // Retail(name: "Gerlanda's Pizza and Cafe", campus: Campus.busch),
-    // Retail(name: "Harvest Juice Bar", campus: Campus.busch, acceptsMealSwipes: true),
-    // Retail(name: "Panera Bread", campus: Campus.busch),
-    // Retail(name: "Szechwan Ichiban", id: "woodys", campus: Campus.busch),
-    Retail(name: "Woody's Cafe", id: "woodys", campus: Campus.busch, acceptsMealSwipes: true),
-    // Retail(name: "Qdoba", campus: Campus.busch),
-    
-    // Livingston
-    Retail(name: "Henry's Diner", id: "henrys", campus: Campus.livingston, acceptsMealSwipes: true),
-    Retail(name: "Kilmer's Market", id: "kilmers", campus: Campus.livingston, acceptsMealSwipes: true),
-    DiningHall(name: "Livingston Dining Commons", campus: Campus.livingston, id : 3, hasTakeout: false),
-    Retail(name: "Sbarro", id: "sbarro", campus: Campus.livingston, acceptsMealSwipes: true),
-    // Retail(name: "Starbucks", campus: Campus.livingston),
-    
-    // College Ave
-    DiningHall(name: "The Atrium", campus: Campus.collegeAve, id : 13, hasTakeout: false, hours: [("09:30", "20:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "23:00"), ("07:00", "21:00"), ("09:30", "20:00")]),
-    Retail(name: "Cafe West", id: "cafe-west", campus: Campus.collegeAve, acceptsMealSwipes: true),
-    
-    // Cook/Douglass
-    Retail(name: "Cook Cafe", id: "cook-cafe", campus: Campus.cookDouglass, acceptsMealSwipes: true),
-    Retail(name: "DC Bagels", id: "dc-bagels",  campus: Campus.cookDouglass, acceptsMealSwipes: true),
-    Retail(name: "Douglass Cafe", id: "douglass-cafe", campus: Campus.cookDouglass, acceptsMealSwipes: true),
-    Retail(name: "Harvest IFNH", id: "harvest", campus: Campus.cookDouglass, acceptsMealSwipes: true),
-    DiningHall(name: "Neilson Dining Hall", campus: Campus.cookDouglass, id : 5, hasTakeout: true),
-    Retail(name: "Red Pine Pizza", id: "red-pine", campus: Campus.cookDouglass, acceptsMealSwipes: true),
-]
-
-enum Campus: CaseIterable {
-    case busch, livingston, collegeAve, cookDouglass
-    
-    var description: String {
-        switch self {
-        case .busch: return "Busch"
-        case .livingston: return "Livingston"
-        case .collegeAve: return "College Ave"
-        case .cookDouglass: return "Cook/Douglass"
-        }
-    }
-}
 
 let meals = [
     "Breakfast",

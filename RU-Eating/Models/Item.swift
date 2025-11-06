@@ -85,7 +85,7 @@ import Observation
         return titles
     }
     
-    init(name: String = "", id: String = "", servingsNumber: Float = 0, servingsUnit: String = "", portion: Float = 1, carbonFootprint: Int = 0, isFavorite: Bool = false) {
+    init(name: String = "", id: String, servingsNumber: Float = 0, servingsUnit: String = "", portion: Float = 1, carbonFootprint: Int = 0, isFavorite: Bool = false) {
         self.name = name
         self.id = id
         self.servingsNumber = servingsNumber

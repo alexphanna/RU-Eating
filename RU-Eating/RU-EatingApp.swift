@@ -10,7 +10,7 @@ import SwiftData
 
 @main
 struct MenRUApp: App {
-    //@Environment(\.requestReview) private var requestReview
+    @Environment(\.requestReview) private var requestReview
     
     @AppStorage("numberOfUses") var numberOfUses: Int = 0
     @AppStorage("filterIngredients") var filterIngredients: Bool = false
@@ -29,15 +29,12 @@ struct MenRUApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .modelContainer(for: [
-                    Diary.self
-                ])
-                /*.onAppear {
+                .onAppear {
                     numberOfUses += 1
                     if numberOfUses % 10 == 0 {
                         requestReview()
                     }
-                }*/
+                }
         }
     }
 }

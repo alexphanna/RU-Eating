@@ -42,7 +42,7 @@ import SwiftUI
     func updateItems(lastDiningHall: String) async {
         fetched = false
         rawItems = [Item]()
-        for place in diningHalls {
+        for place in places {
             if !place.name.contains(lastDiningHall) { continue }
             for meal in meals {
                 do {
