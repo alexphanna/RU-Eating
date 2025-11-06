@@ -128,7 +128,7 @@ struct SettingsView : View {
                                     .foregroundStyle(Color(uiColor: .label))
                             }
                         }
-                        Button {
+                        /*Button {
                             openURL(URL(string: "https://www.instagram.com/avg4cyl")!)
                         } label: {
                             HStack {
@@ -141,10 +141,10 @@ struct SettingsView : View {
                                     .fixedSize()
                                     .foregroundStyle(Color(uiColor: .label))
                             }
-                        }
+                        }*/
                     }
                     Section {
-                        Link(destination: URL(string: "mailto:alex.hanna@rutgers.edu")!, label: {
+                        Link(destination: URL(string: "mailto:alex.hanna@psu.edu")!, label: {
                             Label("Email the Developer", systemImage: "envelope")
                                 .foregroundStyle(.foreground)
                         })
@@ -159,7 +159,7 @@ struct SettingsView : View {
                     } header: {
                         Text("Feedback")
                     } footer: {
-                        Text("App Version: 1.3.0")
+                        Text("App Version: 1.3.1")
                             .frame(maxWidth: .infinity, alignment: .center)
                     }
                 }
